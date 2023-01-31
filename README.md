@@ -23,6 +23,8 @@ You'll need the following installed to run the template successfully:
 - ImageMagick or libvips for ActiveStorage variants
 - Yarn - `brew install yarn` or [Install Yarn](https://yarnpkg.com/en/docs/install)
 - Foreman global (optional) - `gem install foreman` - helps run all your processes in development
+- Elasticsearch [https://www.elastic.co/elasticsearch/service?ultron=B-Stack-Trials-EMEA-UK-BMM&gambit=Stack-Service&blade=adwords-s&hulk=paid&Device=c&thor=elastic%20search%20service&gclid=CjwKCAiAleOeBhBdEiwAfgmXf2Y0-d84MRVCpAKaTwOB8VtUFDok9aDHEeO6fo6xH72TAsqncSpwHhoCa_cQAvD_BwE] DB [http://localhost:9200/]
+- Kibana [https://www.elastic.co/kibana/] (GUI) [http://localhost:5601/app/management/kibana/settings]
 
 ### Factory Bot for RSpec
 
