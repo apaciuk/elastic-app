@@ -85,3 +85,9 @@ gem "brakeman"
 gem "faker"
 gem "active_interaction"
 gem "annotate"
+gem 'searchkick'
+gem "elasticsearch", "~> 7.4"
+gem "elasticsearch-model", "~> 7.2"
+gem "elasticsearch-persistence", "~> 7.2"
+
+gem "elasticsearch-rails", "~> 7.2"

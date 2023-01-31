@@ -1,0 +1,56 @@
+<div class="page-header">
+  <%= link_to purchase_orders_path, class: 'btn btn-default' do %>
+    All Purchase_orders
+  <% end %>
+  <%= link_to edit_purchase_order_path(@purchase_order), class: 'btn btn-primary' do %>
+    Edit
+  <% end %>
+  <h1>Show purchase_order</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Order num:</dt>
+  <dd><%= @purchase_order.order_num %></dd>
+  <dt>Purchase date:</dt>
+  <dd><%= @purchase_order.purchase_date %></dd>
+  <dt>Status:</dt>
+  <dd><%= @purchase_order.status %></dd>
+  <dt>Sales channel:</dt>
+  <dd><%= @purchase_order.sales_channel %></dd>
+  <dt>Order total:</dt>
+  <dd><%= @purchase_order.order_total %></dd>
+  <dt>Num items shipped:</dt>
+  <dd><%= @purchase_order.num_items_shipped %></dd>
+  <dt>Num items unshipped:</dt>
+  <dd><%= @purchase_order.num_items_unshipped %></dd>
+  <dt>Payment method:</dt>
+  <dd><%= @purchase_order.payment_method %></dd>
+  <dt>Shipped at:</dt>
+  <dd><%= @purchase_order.shipped_at %></dd>
+  <dt>Shipping price:</dt>
+  <dd><%= @purchase_order.shipping_price %></dd>
+  <dt>Shipping tax:</dt>
+  <dd><%= @purchase_order.shipping_tax %></dd>
+  <dt>Carrier:</dt>
+  <dd><%= @purchase_order.carrier %></dd>
+  <dt>Tracking number:</dt>
+  <dd><%= @purchase_order.tracking_number %></dd>
+  <dt>Est arrival date:</dt>
+  <dd><%= @purchase_order.est_arrival_date %></dd>
+  <dt>Fulfillment center:</dt>
+  <dd><%= @purchase_order.fulfillment_center %></dd>
+  <dt>Confirnmed at:</dt>
+  <dd><%= @purchase_order.confirnmed_at %></dd>
+  <dt>Returned date:</dt>
+  <dd><%= @purchase_order.returned_date %></dd>
+  <dt>Return reason:</dt>
+  <dd><%= @purchase_order.return_reason %></dd>
+  <dt>Notes:</dt>
+  <dd><%= @purchase_order.notes %></dd>
+  <dt>Refunded at:</dt>
+  <dd><%= @purchase_order.refunded_at %></dd>
+  <dt>Ship to name:</dt>
+  <dd><%= @purchase_order.ship_to_name %></dd>
+  <dt>Ship to address:</dt>
+  <dd><%= @purchase_order.ship_to_address %></dd>
+</dl>

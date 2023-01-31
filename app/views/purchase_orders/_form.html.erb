@@ -1,0 +1,139 @@
+<%= form_with(model: purchase_order) do |form| %>
+  <% if purchase_order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(purchase_order.errors.count, "error") %> prohibited this purchase_order from being saved:</h2>
+
+      <ul>
+      <% purchase_order.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="mb-3">
+    <%= form.label :order_num, class: 'form-label' %>
+      <%= form.text_field :order_num, class: 'form-control' %>
+    </div>
+
+  <div class="mb-3">
+    <%= form.label :purchase_date, class: 'form-label' %>
+      <%= form.date_field :purchase_date, class: 'form-control' %>
+    </div>
+
+  <div class="mb-3">
+    <%= form.label :status, class: 'form-label' %>
+      <%= form.text_field :status, class: 'form-control' %>
+    </div>
+
+  <div class="mb-3">
+    <%= form.label :sales_channel, class: 'form-label' %>
+      <%= form.text_field :sales_channel, class: 'form-control' %>
+    </div>
+
+  <div class="mb-3">
+    <%= form.label :order_total, class: 'form-label' %>
+      <%= form.text_field :order_total, class: 'form-control' %>
+    </div>
+
+  <div class="mb-3">
+    <%= form.label :num_items_shipped, class: 'form-label' %>
+      <%= form.number_field :num_items_shipped, class: 'form-control' %>
+    </div>
+
+  <div class="mb-3">
+    <%= form.label :num_items_unshipped, class: 'form-label' %>
+      <%= form.number_field :num_items_unshipped, class: 'form-control' %>
+    </div>
+
+  <div class="mb-3">
+    <%= form.label :payment_method, class: 'form-label' %>
+      <%= form.text_field :payment_method, class: 'form-control' %>
+    </div>
+
+  <div class="mb-3">
+    <%= form.label :shipped_at, class: 'form-label' %>
+      <%= form.date_field :shipped_at, class: 'form-control' %>
+    </div>
+
+  <div class="mb-3">
+    <%= form.label :shipping_price, class: 'form-label' %>
+      <%= form.text_field :shipping_price, class: 'form-control' %>
+    </div>
+
+  <div class="mb-3">
+    <%= form.label :shipping_tax, class: 'form-label' %>
+      <%= form.text_field :shipping_tax, class: 'form-control' %>
+    </div>
+
+  <div class="mb-3">
+    <%= form.label :carrier, class: 'form-label' %>
+      <%= form.text_field :carrier, class: 'form-control' %>
+    </div>
+
+  <div class="mb-3">
+    <%= form.label :tracking_number, class: 'form-label' %>
+      <%= form.text_field :tracking_number, class: 'form-control' %>
+    </div>
+
+  <div class="mb-3">
+    <%= form.label :est_arrival_date, class: 'form-label' %>
+      <%= form.date_field :est_arrival_date, class: 'form-control' %>
+    </div>
+
+  <div class="mb-3">
+    <%= form.label :fulfillment_center, class: 'form-label' %>
+      <%= form.text_field :fulfillment_center, class: 'form-control' %>
+    </div>
+
+  <div class="mb-3">
+    <%= form.label :confirnmed_at, class: 'form-label' %>
+      <%= form.date_field :confirnmed_at, class: 'form-control' %>
+    </div>
+
+  <div class="mb-3">
+    <%= form.label :returned_date, class: 'form-label' %>
+      <%= form.date_field :returned_date, class: 'form-control' %>
+    </div>
+
+  <div class="mb-3">
+    <%= form.label :return_reason, class: 'form-label' %>
+      <%= form.text_field :return_reason, class: 'form-control' %>
+    </div>
+
+  <div class="mb-3">
+    <%= form.label :notes, class: 'form-label' %>
+      <%= form.text_area :notes, class: 'form-control' %>
+    </div>
+
+  <div class="mb-3">
+    <%= form.label :refunded_at, class: 'form-label' %>
+      <%= form.date_field :refunded_at, class: 'form-control' %>
+    </div>
+
+  <div class="mb-3">
+    <%= form.label :ship_to_name, class: 'form-label' %>
+      <%= form.text_field :ship_to_name, class: 'form-control' %>
+    </div>
+
+  <div class="mb-3">
+    <%= form.label :ship_to_address, class: 'form-label' %>
+      <%= form.text_field :ship_to_address, class: 'form-control' %>
+    </div>
+
+  <div class="mb-3">
+    <% if purchase_order.persisted? %>
+      <div class="float-end">
+        <%= link_to 'Destroy', purchase_order, method: :delete, class: "text-danger", data: { confirm: 'Are you sure?' } %>
+      </div>
+    <% end %>
+
+    <%= form.submit class: 'btn btn-primary' %>
+
+    <% if purchase_order.persisted? %>
+      <%= link_to "Cancel", purchase_order, class: "btn btn-link" %>
+    <% else %>
+      <%= link_to "Cancel", purchase_orders_path, class: "btn btn-link" %>
+    <% end %>
+  </div>
+<% end %>
